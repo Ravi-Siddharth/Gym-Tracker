@@ -1,0 +1,267 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.add-workout-page {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+}
+
+.add-workout-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Headings */
+
+.add-workout-page h1 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 30px;
+}
+
+.add-workout-page h2 {
+  margin: 0 0 20px;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.add-workout-page h3 {
+  margin: 0 0 18px;
+  color: #1e293b;
+}
+
+.add-workout-page h4 {
+  margin: 20px 0 12px;
+}
+
+.add-workout-subtitle {
+  color: #64748b;
+  margin: 0 0 25px;
+  line-height: 1.6;
+}
+
+/* Form sections */
+
+.workout-form-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Labels */
+
+.workout-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 14px;
+}
+
+/* Inputs and dropdowns */
+
+.workout-input,
+.workout-select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #0f172a;
+  outline: none;
+}
+
+.workout-input:focus,
+.workout-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Buttons */
+
+.workout-button {
+  display: inline-block;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: inherit;
+  margin: 8px 10px 0 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.workout-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.workout-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.workout-primary-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.workout-primary-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.workout-secondary-button {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.workout-secondary-button:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.workout-danger-button {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.workout-danger-button:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.workout-back-button {
+  margin: 0 0 20px;
+}
+
+/* Exercise cards */
+
+.workout-exercise-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 18px;
+  background: #ffffff;
+}
+
+.workout-exercise-card h3 {
+  font-size: 18px;
+}
+
+/* Sets layout */
+
+.workout-set-row {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.workout-set-row .workout-input {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.workout-set-row .workout-button {
+  margin: 0;
+}
+
+.workout-set-number {
+  font-size: 14px;
+  white-space: nowrap;
+  color: #334155;
+}
+
+/* Error message */
+
+.workout-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* Save button */
+
+.workout-save-button {
+  padding: 14px 24px;
+  margin: 0 0 25px;
+  font-size: 15px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .add-workout-page {
+    padding: 20px;
+  }
+
+  .workout-set-row {
+    grid-template-columns: 55px minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .workout-set-row .workout-button {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .add-workout-page {
+    padding: 12px;
+  }
+
+  .add-workout-page h1 {
+    font-size: 25px;
+  }
+
+  .add-workout-page h2 {
+    font-size: 20px;
+  }
+
+  .workout-form-card {
+    padding: 16px;
+  }
+
+  .workout-exercise-card {
+    padding: 12px;
+  }
+
+  .workout-set-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .workout-set-number {
+    grid-column: 1 / -1;
+  }
+
+  .workout-set-row .workout-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .workout-button {
+    padding: 10px 12px;
+  }
+
+  .workout-save-button {
+    width: 100%;
+  }
+}
